@@ -1,0 +1,2 @@
+class ReservationTable < ApplicationRecord
+end
