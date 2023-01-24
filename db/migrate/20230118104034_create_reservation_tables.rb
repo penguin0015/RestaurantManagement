@@ -9,6 +9,10 @@ class CreateReservationTables < ActiveRecord::Migration[7.0]
       t.string :telephone
       t.text :description
 
+      t.string :title
+      t.text :content
+      t.datetime :start_time
+
       t.timestamps
     end
   end

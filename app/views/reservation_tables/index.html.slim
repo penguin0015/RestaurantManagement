@@ -1,0 +1,49 @@
+p #notice = notice
+
+.toppage
+  h1.top 予約表
+br
+
+.row.col-md-4
+  .schedule 今月の予定一覧
+table.table
+  thread.thread-light
+    tr
+      th タイトル
+      th 内容
+
+  tbody
+    - @reservation_tables.each do |reservation_table|
+      tr
+        td= link_to reservation_table.title , reservation_table
+        td= reservation_table.start_time.strftime("%m-%d")
+
+= form_with(model: @reservation_table, local: true) do |form|
+
+  .title
+    .form-tag タイトル
+    = form.text_field(:title)
+
+  .content
+    .form-tag 内容
+    = form.text_field(:content)
+
+  .time
+    .firm-tag 時間
+    = form.datetime_select(:start_time)
+
+  .submit
+    = form.submit
+
+br
+
+
+
+br
+.col-md-8
+  = month_calendar events: @reservation_tables do | date, reservation_tables|
+    = date.day
+
+    - reservation_tables.each do |reservation_table|
+      = link_to reservation_table.title, reservation_table
+

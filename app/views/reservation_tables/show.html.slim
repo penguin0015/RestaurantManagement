@@ -1,0 +1,18 @@
+p #notice
+  .show
+p
+  strong title
+  = @reservation_table.title
+
+p
+  strong content
+  = @reservation_table.content
+
+p
+  strong date
+  = @reservation_table.start_time.strftime("%m-%d")
+
+= link_to 'edit', edit_reservation_table_path(@reservation_table)
+= link_to 'delete', reservation_table_path(@reservation_table.id), method: :delete, data: { confirm: 'really?' }
+= link_to 'back', reservation_tables_path
+

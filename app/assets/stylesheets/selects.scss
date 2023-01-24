@@ -1,0 +1,23 @@
+.container1{
+	display: grid;
+	width: 900px;
+	grid-template-columns: 1fr 1fr;
+}
+.button1{
+	margin: 5px;
+	width: 30rem;
+	height: 10rem;
+	border: 1px solid #ccc;
+	//box-sizing: border-box;
+	background: #f1e767;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fdfbfb), to(#ebedee));
+	background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+	-webkit-box-shadow: inset 10px 10px 10px #fff;
+	box-shadow: inset 10px 10px 10px #fff;
+}
+
+.button1:hover{
+	background: -webkit-gradient(linear, left bottom, left top, from(#fdfbfb), to(#ebedee));
+	background: -webkit-linear-gradient(bottom, #fdfbfb 0%, #ebedee 100%);
+	background: linear-gradient(to top, #fdfbfb 0%, #ebedee 100%);
+}

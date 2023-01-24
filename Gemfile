@@ -75,3 +75,4 @@ group :test do
 end
 
   gem 'bootstrap'
+  gem 'simple_calendar', '~> 2.0'

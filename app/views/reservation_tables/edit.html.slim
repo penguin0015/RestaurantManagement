@@ -1,0 +1,16 @@
+= form_with(model: @reservation_table, local: true) do |form|
+
+  .title
+    .form-tag title
+    = form.text_field(:title)
+
+  .content
+    .form-tag content
+    = form.text_field(:content)
+
+    .time
+    .form-tag time
+    = form.datetime_select(:start_time)
+
+    .submit
+      = form.submit
