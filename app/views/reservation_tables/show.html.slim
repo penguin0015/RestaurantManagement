@@ -1,4 +1,4 @@
-p #notice
+p #notice = notice 
   .show
 p
   strong title
@@ -12,7 +12,6 @@ p
   strong date
   = @reservation_table.start_time.strftime("%m-%d")
 
-= link_to 'edit', edit_reservation_table_path(@reservation_table)
-= link_to 'delete', reservation_table_path(@reservation_table.id), method: :delete, data: { confirm: 'really?' }
-= link_to 'back', reservation_tables_path
-
+= link_to 'edit', edit_reservation_table_path(@reservation_table), class:'btn btn-primary'
+= link_to 'delete', @reservation_table, method: :delete, data: { confirm: 'really?' },class:'btn btn-primary'
+= link_to 'back', reservation_tables_path,class:'btn btn-primary'

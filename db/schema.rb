@@ -22,9 +22,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_18_104034) do
     t.time "ReservationTime"
     t.string "telephone"
     t.text "description"
-    t.string "title"
-    t.text "content"
-    t.datetime "start_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

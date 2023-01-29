@@ -1,0 +1,13 @@
+h1 予約表
+br
+br
+
+=@day
+table.table_new 
+  tr.tr_new
+    th.th_new 時間
+    - tables.each do |table|
+      th.th_new = table
+  - times.each do |time|
+    tr.tr_new
+      td.td_new= time

@@ -5,17 +5,14 @@ class ReservationTablesController < ApplicationController
   end
 
   def new
-    @reservation_table = ReservationTable.find(params[:id])
+    @reservation_table = ReservationTable.new
+    @day = params[:day]
   end
 
   def show
     @reservation_table = ReservationTable.find(params[:id])
   end
 
-  def create
-    ReservationTable.create(reservation_table_parameter)
-    redicrect_to reservation_tables_path
-end
   def create
     ReservationTable.create(reservation_table_parameter)
     redirect_to reservation_tables_path
