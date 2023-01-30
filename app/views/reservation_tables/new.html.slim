@@ -5,9 +5,13 @@ br
 =@day
 table.table_new 
   tr.tr_new
-    th.th_new 時間
-    - tables.each do |table|
-      th.th_new = table
+    th.th_new#time 時間
+    - tables.each_key do |table|
+      th.th_new#table = table
   - times.each do |time|
     tr.tr_new
-      td.td_new= time
+      td.td_new#time= time
+      - tables.each do |table|
+        td.td_new= link_to '空席', reservation_table_path(:id), method: :show
+      
+

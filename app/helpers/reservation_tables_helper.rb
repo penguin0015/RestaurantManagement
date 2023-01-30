@@ -13,11 +13,13 @@ module ReservationTablesHelper
     end
 
     def tables
-        tables = ["テーブルA",
-                  "テーブルB",
-                  "テーブルC",
-                  "テーブルD",
-                  "テーブルE",
-                  "テーブルF"]
+        tables = {
+                  "テーブルA" => 0,
+                  "テーブルB" => 1,
+                  "テーブルC" => 2,
+                  "テーブルD" => 3,
+                  "テーブルE" => 4,
+                  "テーブルF" => 5
+                 }
     end
 end
