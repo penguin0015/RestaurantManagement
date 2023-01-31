@@ -4,6 +4,10 @@ class ReservationTablesController < ApplicationController
     @reservation_table = ReservationTable.new
   end
 
+  def reserve
+
+  end
+
   def new
     @reservation_table = ReservationTable.new
     @day = params[:day]

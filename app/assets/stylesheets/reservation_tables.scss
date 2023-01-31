@@ -41,6 +41,7 @@
     border:  solid 1px;
     width: 15rem;
     height: 2rem;
+    background-color: yellow;
 }
 .tr_new{
     border: solid 1px;
@@ -58,4 +59,7 @@
 }
 #table{
     background-color: grey;
+}
+#pointer:hover{
+    background: #98fb98;
 }
